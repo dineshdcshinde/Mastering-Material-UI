@@ -1,12 +1,53 @@
-# React + Vite
+# MUI Most Used Components Cheatsheet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| **Component**         | **Component Props**                                                   | **Short and Simple Example**                                                                                                         |
+| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Button**            | `variant`, `color`, `onClick`, `disabled`                             | `<Button variant="contained" color="primary">Click Me</Button>`                                                                      |
+| **TextField**         | `label`, `variant`, `value`, `onChange`, `helperText`, `disabled`     | `<TextField label="Username" variant="outlined" />`                                                                                  |
+| **Checkbox**          | `checked`, `onChange`, `color`                                        | `<Checkbox checked={true} onChange={handleChange} color="primary" />`                                                                |
+| **Switch**            | `checked`, `onChange`, `color`                                        | `<Switch checked={true} onChange={handleChange} color="primary" />`                                                                  |
+| **Select**            | `value`, `onChange`, `multiple`, `variant`, `disabled`                | `<Select value={value} onChange={handleChange}><MenuItem value={1}>Item</MenuItem></Select>`                                         |
+| **RadioButton**       | `value`, `onChange`, `color`                                          | `<RadioGroup value={value} onChange={handleChange}><FormControlLabel value="a" control={<Radio />} label="Option A" /></RadioGroup>` |
+| **Dialog**            | `open`, `onClose`, `fullWidth`, `maxWidth`                            | `<Dialog open={open} onClose={handleClose}><DialogTitle>Title</DialogTitle></Dialog>`                                                |
+| **Card**              | `raised`, `square`                                                    | `<Card><CardContent>Content here</CardContent></Card>`                                                                               |
+| **Grid**              | `container`, `item`, `spacing`, `xs`, `md`, `direction`, `alignItems` | `<Grid container spacing={2}><Grid item xs={6}>Content</Grid></Grid>`                                                                |
+| **Typography**        | `variant`, `color`, `align`, `noWrap`, `gutterBottom`                 | `<Typography variant="h4">Heading</Typography>`                                                                                      |
+| **AutoComplete**      | `options`, `value`, `onChange`, `freeSolo`                            | `<Autocomplete options={options} renderInput={(params) => <TextField {...params} label="Select an Option" />} />`                    |
+| **Tooltip**           | `title`, `placement`                                                  | `<Tooltip title="Delete"><Button>Delete</Button></Tooltip>`                                                                          |
+| **Snackbar**          | `open`, `message`, `onClose`, `autoHideDuration`                      | `<Snackbar open={open} message="Item saved" onClose={handleClose} />`                                                                |
+| **AppBar**            | `position`, `color`, `elevation`                                      | `<AppBar position="static"><Toolbar><Typography variant="h6">My App</Typography></Toolbar></AppBar>`                                 |
+| **Drawer**            | `open`, `onClose`, `anchor`, `variant`, `sx`                          | `<Drawer open={open} onClose={handleClose}><List><ListItem>Item</ListItem></List></Drawer>`                                          |
+| **LinearProgress**    | `variant`, `value`, `color`, `sx`                                     | `<LinearProgress variant="determinate" value={50} />`                                                                                |
+| **CircularProgress**  | `size`, `color`, `thickness`                                          | `<CircularProgress size={50} color="secondary" />`                                                                                   |
+| **Divider**           | `light`, `variant`, `sx`                                              | `<Divider variant="middle" />`                                                                                                       |
+| **Avatar**            | `alt`, `src`, `variant`, `sx`, `color`                                | `<Avatar alt="User" src="/user.jpg" />`                                                                                              |
+| **Chip**              | `label`, `color`, `onClick`, `onDelete`, `variant`                    | `<Chip label="Tag" color="primary" />`                                                                                               |
+| **Badge**             | `badgeContent`, `color`, `anchorOrigin`, `overlap`, `max`             | `<Badge badgeContent={4} color="primary"><MailIcon /></Badge>`                                                                       |
+| **Paper**             | `elevation`, `square`, `sx`, `variant`                                | `<Paper elevation={3}><p>Content</p></Paper>`                                                                                        |
+| **List**              | `dense`, `subheader`, `disablePadding`                                | `<List><ListItem><ListItemText primary="Item" /></ListItem></List>`                                                                  |
+| **Input**             | `value`, `onChange`, `disabled`, `placeholder`, `fullWidth`           | `<Input value={value} onChange={handleChange} placeholder="Enter Text" />`                                                           |
+| **IconButton**        | `color`, `onClick`, `disabled`                                        | `<IconButton color="primary" onClick={handleClick}><DeleteIcon /></IconButton>`                                                      |
+| **Collapse**          | `in`, `timeout`, `collapsedHeight`                                    | `<Collapse in={open}><div>Content</div></Collapse>`                                                                                  |
+| **Stepper**           | `activeStep`, `alternativeLabel`, `orientation`, `onClick`            | `<Stepper activeStep={step} orientation="vertical"><Step><StepLabel>Step 1</StepLabel></Step></Stepper>`                             |
+| **Rating**            | `value`, `onChange`, `name`, `precision`, `readOnly`                  | `<Rating value={value} onChange={handleChange} />`                                                                                   |
+| **Slider**            | `value`, `onChange`, `min`, `max`, `step`, `valueLabelDisplay`        | `<Slider value={value} onChange={handleChange} min={0} max={100} />`                                                                 |
+| **Skeleton**          | `variant`, `width`, `height`, `animation`                             | `<Skeleton variant="text" width={200} />`                                                                                            |
+| **Box**               | `p`, `m`, `sx`, `display`, `alignItems`, `justifyContent`             | `<Box sx={{ display: 'flex', p: 2 }}>Content</Box>`                                                                                  |
+| **Container**         | `maxWidth`, `disableGutters`, `sx`                                    | `<Container maxWidth="sm"><p>Content</p></Container>`                                                                                |
+| **Tab**               | `label`, `value`, `onClick`, `disabled`, `icon`                       | `<Tab label="Tab 1" value={0} />`                                                                                                    |
+| **Pagination**        | `page`, `count`, `onChange`, `color`                                  | `<Pagination page={1} count={10} onChange={handleChange} color="primary" />`                                                         |
+| **Menu**              | `open`, `anchorEl`, `onClose`, `MenuItem`                             | `<Menu open={open} anchorEl={anchorEl}><MenuItem>Option</MenuItem></Menu>`                                                           |
+| **ListItemButton**    | `selected`, `onClick`, `dense`                                        | `<ListItemButton selected={true}><ListItemText primary="Item" /></ListItemButton>`                                                   |
+| **DialogContentText** | `children`, `sx`                                                      | `<DialogContentText>Dialog content goes here.</DialogContentText>`                                                                   |
+| **DatePicker**        | `value`, `onChange`, `format`, `disablePast`, `disableFuture`         | `<DatePicker value={date} onChange={handleChange} format="MM/dd/yyyy" />`                                                            |
+| **TimePicker**        | `value`, `onChange`, `format`, `ampm`, `disabled`                     | `<TimePicker value={time} onChange={handleChange} />`                                                                                |
+| **DateTimePicker**    | `value`, `onChange`, `disablePast`, `disableFuture`, `format`         | `<DateTimePicker value={dateTime} onChange={handleChange} />`                                                                        |
+| **Autocomplete**      | `options`, `value`, `onChange`, `freeSolo`, `multiple`                | `<Autocomplete options={options} renderInput={(params) => <TextField {...params} label="Option" />} />`                              |
+| **DialogActions**     | `sx`, `align`                                                         | `<DialogActions><Button onClick={handleClose}>Close</Button></DialogActions>`                                                        |
+| **DialogTitle**       | `sx`, `children`                                                      | `<DialogTitle>Dialog Title</DialogTitle>`                                                                                            |
+| **FormControl**       | `required`, `disabled`, `error`                                       | `<FormControl required><InputLabel>Label</InputLabel><Input /></FormControl>`                                                        |
+| **FormHelperText**    | `error`, `children`                                                   | `<FormHelperText error>Invalid input</FormHelperText>`                                                                               |
+| **GridList**          | `cellHeight`, `spacing`, `cols`                                       | `<GridList cellHeight={160} cols={3}><GridListTile><img src="image.jpg" alt="Image" /></GridListTile></GridList>`                    |
+| **MobileStepper**     | `steps`, `activeStep`, `nextButton`, `backButton`                     | `<MobileStepper steps={5} activeStep={activeStep} nextButton={<Button>Next</Button>} backButton={<Button>Back</Button>} />`          |
+| **Popover**           | `open`, `anchorEl`, `onClose`, `anchorOrigin`, `transformOrigin`      | `<Popover open={open} anchorEl={anchorEl}><Typography>Popover content</Typography></Popover>`                                        |
+| **Rating**            | `value`, `onChange`,                                                  |
